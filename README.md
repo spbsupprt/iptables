@@ -79,6 +79,8 @@ COMMIT
 Рестартим сервис iptables и пробуем подключиться c entralRouter, предварительно поставив на него пакет knockd
 
 Итог:
+
+
 ![image](https://github.com/user-attachments/assets/113c4a68-ea4d-4548-9fa4-54a879d8cc34)
 
 
