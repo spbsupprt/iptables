@@ -17,5 +17,8 @@
 
 ---
 
-Выполнялось после плейбука https://github.com/spbsupprt/Network-architecture/blob/main/network.yml
+За основу взят плейбук https://github.com/spbsupprt/Network-architecture/blob/main/network.yml и добавлен сервер inetRouter2
+
+Дано:
+
 
