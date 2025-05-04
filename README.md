@@ -115,3 +115,7 @@ COMMIT
 
 И проверяем что у нас на centralServer запустился nginx с пробросом на centralServer
 
+![image](https://github.com/user-attachments/assets/b4996211-7299-457f-ad83-2702284739f0)
+
+
+![image](https://github.com/user-attachments/assets/bb75c8e4-108b-411d-9fbb-3e538f56cab5)
