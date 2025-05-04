@@ -29,3 +29,30 @@
 - реализовать knocking port
 - centralRouter может попасть на ssh inetrRouter через knock скрипт
 - пример в материалах.
+
+Устанавливаем apt install knockd
+
+Смотрим конфиг /etc/knockd.conf:
+
+```
+[options]
+        UseSyslog
+
+[openSSH]
+        sequence    = 7000,8000,9000
+        seq_timeout = 5
+        command     = /sbin/iptables -A INPUT -s %IP% -p tcp --dport 22 -j ACCEPT
+        tcpflags    = syn
+
+[closeSSH]
+        sequence    = 9000,8000,7000
+        seq_timeout = 5
+        command     = /sbin/iptables -D INPUT -s %IP% -p tcp --dport 22 -j ACCEPT
+        tcpflags    = syn
+
+[openHTTPS]
+        sequence    = 12345,54321,24680,13579
+        seq_timeout = 5
+        command     = /usr/local/sbin/knock_add -i -c INPUT -p tcp -d 443 -f %IP%
+        tcpflags    = syn
+```
