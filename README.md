@@ -18,3 +18,4 @@
 ---
 
 Выполнялось после плейбука https://github.com/spbsupprt/Network-architecture/blob/main/network.yml
+
