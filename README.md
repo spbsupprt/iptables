@@ -26,3 +26,6 @@
 
 ### реализовать knocking port
 
+- реализовать knocking port
+- centralRouter может попасть на ssh inetrRouter через knock скрипт
+- пример в материалах.
