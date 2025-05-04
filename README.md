@@ -114,3 +114,4 @@ COMMIT
 ```
 
 И проверяем что у нас на centralServer запустился nginx с пробросом на centralServer
+
