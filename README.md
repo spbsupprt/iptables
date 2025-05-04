@@ -112,3 +112,5 @@ COMMIT
 COMMIT
 # Completed on Sat Apr 30 07:44:54 2025
 ```
+
+И проверяем что у нас на centralServer запустился nginx с пробросом на centralServer
