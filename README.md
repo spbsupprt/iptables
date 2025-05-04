@@ -36,23 +36,27 @@
 
 ```
 [options]
-        UseSyslog
+        logfile = /var/log/knockd.log
+[opencloseSSH]
+        sequence      = 8881:tcp,7777:tcp,9991:tcp
+        seq_timeout   = 15
+        tcpflags      = syn,ack
+        start_command = /usr/bin/iptables -A TCP -s %IP% -p tcp --dport 22 -j ACCEPT
+        cmd_timeout   = 10
+        stop_command  = /usr/bin/iptables -D TCP -s %IP% -p tcp --dport 22 -j ACCEPT
+```
 
-[openSSH]
-        sequence    = 7000,8000,9000
-        seq_timeout = 5
-        command     = /sbin/iptables -A INPUT -s %IP% -p tcp --dport 22 -j ACCEPT
-        tcpflags    = syn
+Изменяем конфиг:
 
-[closeSSH]
-        sequence    = 9000,8000,7000
-        seq_timeout = 5
-        command     = /sbin/iptables -D INPUT -s %IP% -p tcp --dport 22 -j ACCEPT
-        tcpflags    = syn
+/etc/default/knockd
 
-[openHTTPS]
-        sequence    = 12345,54321,24680,13579
-        seq_timeout = 5
-        command     = /usr/local/sbin/knock_add -i -c INPUT -p tcp -d 443 -f %IP%
-        tcpflags    = syn
+```
+# control if we start knockd at init or not
+# 1 = start
+# anything else = don't start
+# PLEASE EDIT /etc/knockd.conf BEFORE ENABLING
+START_KNOCKD=1
+
+# command line options
+#KNOCKD_OPTS="-i eth1"
 ```
