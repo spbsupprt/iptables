@@ -21,4 +21,8 @@
 
 Дано:
 
+![image](https://github.com/user-attachments/assets/5769d05f-7e9f-44e3-8c0e-782262290859)
+
+
+### реализовать knocking port
 
