@@ -38,7 +38,7 @@
 [options]
         logfile = /var/log/knockd.log
 [opencloseSSH]
-        sequence      = 8881:tcp,7777:tcp,9991:tcp
+        sequence      = 1111:tcp,2222:tcp,3333:tcp
         seq_timeout   = 15
         tcpflags      = syn,ack
         start_command = /usr/bin/iptables -A TCP -s %IP% -p tcp --dport 22 -j ACCEPT
@@ -46,17 +46,4 @@
         stop_command  = /usr/bin/iptables -D TCP -s %IP% -p tcp --dport 22 -j ACCEPT
 ```
 
-Изменяем конфиг:
 
-/etc/default/knockd
-
-```
-# control if we start knockd at init or not
-# 1 = start
-# anything else = don't start
-# PLEASE EDIT /etc/knockd.conf BEFORE ENABLING
-START_KNOCKD=1
-
-# command line options
-#KNOCKD_OPTS="-i eth1"
-```
