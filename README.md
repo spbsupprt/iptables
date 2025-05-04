@@ -41,9 +41,9 @@
         sequence      = 1111:tcp,2222:tcp,3333:tcp
         seq_timeout   = 15
         tcpflags      = syn,ack
-        start_command = /usr/bin/iptables -A TCP -s %IP% -p tcp --dport 22 -j ACCEPT
+        start_command = /sbin/iptables -A TCP -s %IP% -p tcp --dport 22 -j ACCEPT
         cmd_timeout   = 10
-        stop_command  = /usr/bin/iptables -D TCP -s %IP% -p tcp --dport 22 -j ACCEPT
+        stop_command  = /sbin/iptables -D TCP -s %IP% -p tcp --dport 22 -j ACCEPT
 ```
 
 
