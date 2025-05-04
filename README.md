@@ -16,3 +16,5 @@
 - дефолт в инет оставить через inetRouter.
 
 ---
+
+Выполнялось после плейбука https://github.com/spbsupprt/Network-architecture/blob/main/network.yml
