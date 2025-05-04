@@ -75,3 +75,10 @@
 COMMIT
 # END or further rules
 ```
+
+Рестартим сервис iptables и пробуем подключиться c entralRouter, предварительно поставив на него пакет knockd
+
+
+
+
+
